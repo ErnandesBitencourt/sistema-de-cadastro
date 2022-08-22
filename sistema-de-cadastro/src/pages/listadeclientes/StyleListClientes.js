@@ -46,15 +46,14 @@ export const Main = styled.main`
 
              width: 100%;
              height: 3em;
-             border : solid;
+             
             
         }
         @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
          /* tablets */
             width: 100%;
              height: 3em;
-             border : solid;
-
+            
          }
 
         nav{
@@ -124,12 +123,13 @@ export const Main = styled.main`
          @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
         /* celulares */
 
-            font-size: 0.6em;
-            
+            font-size: 0.7em;
+            border-bottom: solid 1px #2b2a4a;
         }
         @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
          /* tablets */
          font-size: 1em;
+         border-bottom: solid 2px #2b2a4a;
 
          }
 
