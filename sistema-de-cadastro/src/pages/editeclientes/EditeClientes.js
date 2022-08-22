@@ -27,8 +27,6 @@ export const EditeClientes = () =>{
     }; 
 
     console.log(list)
-  
-   
 
     const editeUsers = () => {
         
