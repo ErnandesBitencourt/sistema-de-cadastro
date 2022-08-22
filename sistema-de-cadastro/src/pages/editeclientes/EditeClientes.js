@@ -61,7 +61,7 @@ export const EditeClientes = () =>{
                             <input 
                             type={"text"}
                             name={"name"}
-                            placeholder={"Nome completo"}
+                            
                             onChange={onChange}
                             value={form.name}
                             title={"Nome deve conter pelos menos 3 letas"}
@@ -72,7 +72,7 @@ export const EditeClientes = () =>{
                             <label>Idade</label> 
                             <input type={"number"}
                             name={"age"}
-                            placeholder={"Idade"}
+                           
                             onChange={onChange}
                             value={form.age}
                             title={"você deve ter a idade superior a 18"}
@@ -85,7 +85,7 @@ export const EditeClientes = () =>{
                             <label>Email</label>
                             <input type={"email"} 
                             name={"email"}
-                            placeholder={"email"}
+                            
                             onChange={onChange}
                             value={form.email}
                             title={"obrigatorio email valido"}
@@ -97,7 +97,7 @@ export const EditeClientes = () =>{
                         <div> 
                             <label>Cep</label>
                             <input type={"text"}
-                            placeholder={"cep"}
+                            
                             name={"address"}
                             onChange={onChange}
                             value={form.address}
@@ -111,7 +111,7 @@ export const EditeClientes = () =>{
                             <input
                             type={"number"} 
                             name={"house"}
-                            placeholder={"N° casa"}
+                          
                             onChange={onChange}
                             value={form.house}
                             title={"obrigatorio n° da casa"}
