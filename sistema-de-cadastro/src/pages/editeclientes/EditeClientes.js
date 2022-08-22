@@ -15,33 +15,21 @@ export const EditeClientes = () =>{
     const {id} = useParams()
     console.log(id)
 
-    // useEffect(()=>{
-    //     allUsers()
-    // },[id]) 
-    // const allUsers = () =>{
-    //     axios.get(`${getAllUsers}/${id}`)
-    //     .then((res)=>{setList(res.data.resultUsers)})
-    //     .catch((error)=>{alert(error.response)})
-        
-    // }; 
-
- 
-
-    const editeUsers = () => {
-        
+    const editeUsers = (e) => {
+        e.preventDefault()
         const body= {
-            id:id,
+           
             name: form.name, 
             age: form.age, 
-            email: form.emai ,
+            email: form.email,
             address:form.address,
             house:form.house 
             
         } 
         axios
-        .put({editUsers},body)
+        .put(`${editUsers}/${id}`,body)
         .then(()=> alert("Atualizado!"))
-        clear()
+        console.log(body)
         .catch(()=> alert("Erro ao atualizar!"))
     }
       
@@ -50,7 +38,7 @@ export const EditeClientes = () =>{
         <Container>
             <Main>
                 <span>
-                    <form >
+                    <form onSubmit={editeUsers} >
                         <header>
                             <h1>
                                 A T U A L I Z A R 
@@ -119,7 +107,7 @@ export const EditeClientes = () =>{
                             />
                         </div>
                         <div>
-                             <button onClick={()=>editeUsers()}>Atualizar Cadastro</button>
+                             <button type="submit">Atualizar Cadastro</button>
                         </div>
                     </form>
                 </span>

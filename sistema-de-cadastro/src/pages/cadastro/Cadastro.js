@@ -12,8 +12,10 @@ export const Cadastro = () =>{
 const navigate = useNavigate()
 const {form, onChange,clear} = useForm({name: "" ,age:"",email: "",address: "", house: ""})
 
-const createClienteUsers =  () =>{
-   
+
+
+const createClienteUsers =  (e) =>{
+    e.preventDefault()
     const body= {
         name:form.name,
         age:form.age,
@@ -23,10 +25,11 @@ const createClienteUsers =  () =>{
     }
     axios
     .post(createUsers,body)
-    .then(() =>{alert("Cadastrado com sucesso!")}) 
+    .then(()=>{alert("Cadastrado com sucesso!")}) 
     clear()
-    .catch(()=>{alert("Error ao cadastrar")})
-   
+    .catch((error)=>{alert(error.res.message)}
+    )
+    
 }
 
 
@@ -39,7 +42,7 @@ return(
                         C A D A S T R E - S E
                     </h1>
                 </header>
-                    <form >
+                    <form onSubmit={createClienteUsers} >
                         <div>
                             <label>Nome</label>
                             <input 
@@ -79,6 +82,7 @@ return(
                             onChange={onChange}
                             value={form.address}
                             title={"obrigatorio cep valido"}
+                            
                             required
                             />
                         </div>
@@ -95,7 +99,7 @@ return(
                         </div>
 
                         <div>
-                            <button onClick={()=>createClienteUsers()} >Criar</button>
+                            <button type="submit">Criar</button>
                         </div>
                     </form>
                 </span>
