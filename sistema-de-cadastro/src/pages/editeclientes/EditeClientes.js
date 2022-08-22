@@ -13,20 +13,19 @@ export const EditeClientes = () =>{
     const {list ,setList} = useState()
     const navigate = useNavigate()
     const {id} = useParams()
-
     console.log(id)
 
-    useEffect(()=>{
-        allUsers()
-    },[id]) 
-    const allUsers = () =>{
-        axios.get(`${getAllUsers}/${id}`)
-        .then((res)=>{setList(res.data.resultUsers)})
-        .catch((error)=>{alert(error.response)})
+    // useEffect(()=>{
+    //     allUsers()
+    // },[id]) 
+    // const allUsers = () =>{
+    //     axios.get(`${getAllUsers}/${id}`)
+    //     .then((res)=>{setList(res.data.resultUsers)})
+    //     .catch((error)=>{alert(error.response)})
         
-    }; 
+    // }; 
 
-    console.log(list)
+ 
 
     const editeUsers = () => {
         
@@ -40,16 +39,12 @@ export const EditeClientes = () =>{
             
         } 
         axios
-        .put(`${editUsers}/${id}`,body)
+        .put({editUsers},body)
         .then(()=> alert("Atualizado!"))
         clear()
         .catch(()=> alert("Erro ao atualizar!"))
     }
       
-
-  
-    
-
 
     return(
         <Container>
@@ -95,6 +90,7 @@ export const EditeClientes = () =>{
                             value={form.email}
                             title={"obrigatorio email valido"}
                             required
+                            
                             />
                         </div>   
 

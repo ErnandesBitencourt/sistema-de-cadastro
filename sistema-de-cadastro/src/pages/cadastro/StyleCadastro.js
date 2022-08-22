@@ -7,6 +7,15 @@ export const Container = styled.section`
     align-items: center;
     width: 100%;
     height: 100vh;
+    @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+/* celulares */
+        width: 100%;
+        height: 100%;
+        
+        }
+    @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+    /* tablets */
+    }
 
 `;
 
@@ -17,27 +26,70 @@ export const Main = styled.main`
     align-items: center;
     padding: 3em;
     width: 40%;
-    height: 65%;
+    height: auto;
     gap: 2em;
+    @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+/* celulares */
+    
+        width: 100%;
+        gap:0;
+        
+        }
+    @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+    /* tablets */
+    }
+
+
     span{
         display: flex;
         flex-direction: column;
         gap:2%;
         width: 70%;
         height: 90%;
+
+        @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+        /* celulares */
+        width: 100%;
+        height: 70%;
+        gap :1px;
         
+        }
+        @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+         /* tablets */
+
+         }
     };
+
 
     header{
         display: flex;
         justify-content: center;
-          align-items: center;
+        align-items: center;
         width: 100%;
         height: 15%;
+        @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+        /* celulares */
+        width: 100%;
+        height: 9%;
+        
+       
+        }
+        @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+         /* tablets */
+         }
+
        h1{
         font-size: 20px;
         border-bottom: 2px solid #2b2a4a;
         color: #2b2a4a;
+        @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+        /* celulares */
+             font-size: 15px;
+        }
+        @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+         /* tablets */
+         font-size: 17px;
+         }
        
        }
     }
@@ -51,6 +103,19 @@ export const Main = styled.main`
         width: 100%;
         height: 90%;
         gap: 10px;
+        @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+        /* celulares */
+             font-size: 15px;
+             width: 100%;
+             height: 5%;
+            
+        }
+        @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+         /* tablets */
+         }
+       
+       
+
     };
  
     div{
@@ -60,6 +125,13 @@ export const Main = styled.main`
         align-items: left;
         width: 100%;
         height: 30%;
+        @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+        /* celulares */
+             font-size: 15px;
+             width: 100%;
+             height: 5%;
+             
+        };
         
 
         button{
@@ -69,6 +141,12 @@ export const Main = styled.main`
             border-radius: 5px;
             color: white;
             cursor: pointer;
+            @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+        /* celulares */
+             font-size: 15px;
+             padding: 0.7em 1.5em ;
+        }
+
             :hover{
                 background-color: white;
                 color:#2b2a4a;
@@ -105,9 +183,21 @@ export const Main = styled.main`
         align-items: center;
         width: 100%;
         height: 2.5em;
+       
+        margin-top:2em ;
+        @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+        /* celulares */
+            margin-top:2em ;
+             font-size: 15px;
+             width: 100%;
+             height: 5%;
+            
+        };
+
+
         button{
             background-color: #2b2a4a;
-            padding: 1em 3em ;
+            padding: 2% 7% ;
             font-size: 15px;
             border-radius: 5px;
             color: white;

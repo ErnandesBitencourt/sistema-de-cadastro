@@ -44,8 +44,7 @@ return(
                             <label>Nome</label>
                             <input 
                             type={"text"}
-                            name={"name"}
-                            placeholder={"Nome completo"}
+                            name={"name"}                           
                             onChange={onChange}
                             value={form.name}
                             title={"Nome deve conter pelos menos 3 letas"}
@@ -55,8 +54,7 @@ return(
                         <div>
                             <label>Idade</label>
                             <input type={"number"}
-                            name={"age"}
-                            placeholder={"Idade"}
+                            name={"age"}                           
                             onChange={onChange}
                             value={form.age}
                             title={"você deve ter a idade superior a 18"}
@@ -67,8 +65,7 @@ return(
                         <div>
                             <label>Email</label>   
                             <input type={"email"} 
-                            name={"email"}
-                            placeholder={"email"}
+                            name={"email"}                           
                             onChange={onChange}
                             value={form.email}
                             title={"obrigatorio email valido"}
@@ -77,8 +74,7 @@ return(
                         </div>
                         <div>
                             <label>Cep</label>
-                            <input type={"text"}
-                            placeholder={"Cep do 'AM' "}
+                            <input type={"text"}                           
                             name={"address"}
                             onChange={onChange}
                             value={form.address}
@@ -91,7 +87,6 @@ return(
                                 <input
                                 type={"number"} 
                                 name={"house"}
-                                placeholder={"N° casa"}
                                 onChange={onChange}
                                 value={form.house}
                                 title={"obrigatorio n° da casa"}

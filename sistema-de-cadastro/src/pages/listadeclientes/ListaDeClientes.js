@@ -3,8 +3,8 @@ import {useNavigate} from "react-router-dom"
 import { goToPageCadastro, gotoPageEditeClientes } from "../../routes/coordinator";
 import { useState , useEffect } from "react";
 import axios from "axios"
-import { getAllUsers } from "../../componets/Url";
-import { DelUsers } from "../../endpoints/DelUsers";
+import { deletUsers, getAllUsers } from "../../componets/Url";
+// import { DelUsers } from "../../endpoints/DelUsers";
 import { Aside, Container, Main } from "./StyleListClientes";
 
 
@@ -14,9 +14,18 @@ const [listClients, setListClients] =useState([])
 
 useEffect(()=>{
     allUsers()
-},[listClients])
+},[])
 
-   
+const DelUsers = (id) => {
+
+    axios
+    .delete (`${deletUsers}/${id}`)
+    .then(()=>
+    allUsers(),
+    alert("Excluido com sucesso!")
+    )
+    .catch(()=>alert("Error ao excluir"))
+  }; 
 
 const allUsers = () =>{
     axios.get(getAllUsers)
@@ -24,7 +33,7 @@ const allUsers = () =>{
     .catch((error)=>{alert(error.response)})
 }; 
 
-console.log(listClients)
+
 
  const lisClientsUers = listClients.map((users)=>{
     return (
@@ -58,6 +67,7 @@ console.log(listClients)
         </Aside>
     )
 })
+console.log(listClients)
 
 return(
     <Container>
