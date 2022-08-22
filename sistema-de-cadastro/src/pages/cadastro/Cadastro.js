@@ -27,7 +27,7 @@ const createClienteUsers =  (e) =>{
     .post(createUsers,body)
     .then(()=>{alert("Cadastrado com sucesso!")}) 
     clear()
-    .catch((error)=>{alert(error.res.message)}
+    .catch(()=>{alert("Cep não pertence ao 'AM'")}
     )
     
 }
@@ -79,6 +79,7 @@ return(
                             <label>Cep</label>
                             <input type={"text"}                           
                             name={"address"}
+                            placeholder={"Somente CEP do 'AM'"}
                             onChange={onChange}
                             value={form.address}
                             title={"obrigatorio cep valido"}
