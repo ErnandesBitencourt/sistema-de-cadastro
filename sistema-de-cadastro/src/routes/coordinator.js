@@ -1,6 +1,10 @@
 export const goToPageCadastro = (navigate) =>{
-    navigate("/")
+    navigate("/cadastrar-cliente")
 };
+export const goToPageHomePage = (navigate) =>{
+    navigate("/index")
+};
+
 
 export const gotoPageListaDeClientes =(navigate) =>{
     navigate("/listaDeClientes/")

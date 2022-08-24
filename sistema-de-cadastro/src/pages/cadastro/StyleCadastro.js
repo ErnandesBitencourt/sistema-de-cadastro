@@ -179,7 +179,7 @@ export const Main = styled.main`
 
     footer{
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         width: 100%;
         height: 2.5em;

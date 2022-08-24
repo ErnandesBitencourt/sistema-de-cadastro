@@ -1,7 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom"
 import { createUsers } from "../../componets/Url";
-import { gotoPageListaDeClientes } from "../../routes/coordinator";
+import { gotoPageListaDeClientes, voltaUmaPage } from "../../routes/coordinator";
 import { useForm } from "../../hooks/useForm";
 import axios from "axios";
 import { Container,Main } from "./StyleCadastro";
@@ -105,7 +105,9 @@ return(
                     </form>
                 </span>
             <footer>
+                <button onClick={()=>voltaUmaPage(navigate)}>Voltar</button>
                 <button onClick={()=>gotoPageListaDeClientes(navigate)}>Lista de clientes</button>
+                
             </footer>
         </Main>
     </Container>
