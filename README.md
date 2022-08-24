@@ -37,6 +37,11 @@ O código foi escrito a partir do paradigma de Programação Orientada à Objeto
 ### Banco de dados 
 
  * https://github.com/ErnandesBitencourt/sistema-de-cadastro-back
+ 
+### Home Page
+
+![image](https://user-images.githubusercontent.com/80565676/186289975-a41120cc-4d94-40c2-9fcb-b465cfea73e4.png)
+
 
 ### Documentação da API 
 
