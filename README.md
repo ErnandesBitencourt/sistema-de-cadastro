@@ -40,6 +40,7 @@ O código foi escrito a partir do paradigma de Programação Orientada à Objeto
  
 ### Home Page
 
+
 ![image](https://user-images.githubusercontent.com/80565676/186289975-a41120cc-4d94-40c2-9fcb-b465cfea73e4.png)
 
 
@@ -49,7 +50,7 @@ O código foi escrito a partir do paradigma de Programação Orientada à Objeto
 
 * GET  https://bemol-cadastro.herokuapp.com/user/allUsers
 
-![image](https://user-images.githubusercontent.com/80565676/186039585-3cc1d095-fb4d-4ac2-9cea-8a3b20ef5d3d.png)
+![lista-de-clients](https://user-images.githubusercontent.com/80565676/187035649-5ebfaaf0-02f5-4db5-b3ee-1c3c1ea4023d.PNG)
 
 
 
