@@ -19,7 +19,7 @@ export const HomePage = () => {
 
     return (
        <>
-       { loading  ? <TelaDecarregamento/> :
+       { loading ? <TelaDecarregamento/> :
         <Container>
               :
             <Main>

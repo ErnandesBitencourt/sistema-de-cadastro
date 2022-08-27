@@ -5,25 +5,24 @@ import { useState , useEffect } from "react";
 import axios from "axios"
 import { deletUsers, getAllUsers } from "../../componets/Url";
 // import { DelUsers } from "../../endpoints/DelUsers";
-import { Aside, Container, Footer, Main } from "./StyleListClientes";
+import { Aside, Button2, ButtonNav, Container, Footer, Hamburge, Header, Main, Nav } from "./StyleListClientes";
 import Logo from "../../img/Logo.png"
 
 
 export const ListaDeClientes = () =>{ 
 const navigate = useNavigate()
-const [listClients, setListClients] =useState([])
+const [listClients, setListClients]=useState([])
+const [hanburge, setHanburge] = useState(false)
 
-
+const OnHanburge = () =>{
+    setHanburge(!hanburge)
+}
 
 useEffect(()=>{
-    allUsers()
-   
-   
+    allUsers()  
 },[])
 
-
 const DelUsers = (id) => {
-
     axios
     .delete (`${deletUsers}/${id}`)
     .then(()=>
@@ -38,8 +37,6 @@ const allUsers = () =>{
     .then((res)=>{setListClients(res.data.resultUsers)})
     .catch((error)=>{alert(error.response)})
 }; 
-
-
 
  const lisClientsUers = listClients.map((users)=>{
     return (
@@ -78,19 +75,28 @@ console.log(lisClientsUers)
 return(
 
     <Container>
-        <Main>
-            <header>
-                <nav>
-                    <button onClick={()=> voltaUmaPage(navigate)} > Voltar </button>
-                </nav> 
-                <span>
-                    <h1>L I S T A - D E - C L I E N T E S</h1>
-                </span>  
-                <nav>
-                    <button onClick={()=> goToPageCadastro(navigate)} > Criar Cadastro </button>
-                </nav> 
 
-            </header>
+            <Header>
+                <Nav >
+                    <ButtonNav  hanburge={hanburge}  onClick={()=>{OnHanburge()}}>
+                        <button onClick={()=> voltaUmaPage(navigate)} > Voltar </button>
+                    </ButtonNav > 
+                    <span>
+                        <h1>L I S T A - D E - C L I E N T E S</h1>
+                    </span>  
+                    <ButtonNav hanburge={hanburge} onClick={()=>{OnHanburge()}}>
+                        <button onClick={()=> goToPageCadastro(navigate)} > Criar Cadastro </button>
+                        <Button2  hanburge={hanburge} onClick={()=> voltaUmaPage(navigate)} > Voltar </Button2>
+                    </ButtonNav > 
+                    <Hamburge hanburge={hanburge} onClick={()=>{OnHanburge()}} >
+                        <span hanburge={hanburge}></span>
+                        <span hanburge={hanburge}></span>
+                        <span hanburge={hanburge}></span>
+                    </Hamburge>
+                </Nav>
+            </Header >
+        <Main>
+           
             <div>
                 {lisClientsUers}
             </div>

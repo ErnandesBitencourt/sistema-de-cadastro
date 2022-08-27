@@ -11,7 +11,7 @@ export const Container = styled.section`
     @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
         /* celulares */
         width: 100%;
-       
+        height: 100vh;
        
         }
     @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
@@ -23,7 +23,10 @@ export const Main = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
+   
     justify-content: space-around;
+    max-width: 500px;
+    max-width: 400px;
     padding: 3%;
     gap:2%;
     border-radius: 10px;
@@ -37,8 +40,8 @@ export const Main = styled.main`
     ;
     @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
         /* celulares */
-        width: 100%;
-        height: 90vh;
+        max-width: 500px;
+        max-width: 400px;
         box-shadow:none;
         
         }

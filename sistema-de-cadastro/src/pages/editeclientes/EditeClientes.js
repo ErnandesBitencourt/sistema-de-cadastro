@@ -90,6 +90,7 @@ export const EditeClientes = () =>{
                             onChange={onChange}
                             value={form.address}
                             title={"obrigatorio cep valido"}
+                            placeholder={"Somente CEP do 'AM'"}
                             required
                             />
                         </div>  
