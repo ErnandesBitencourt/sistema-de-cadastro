@@ -100,23 +100,26 @@ export const Div = styled.span`
         1px 119px 80px rgba(0, 0, 0, 0.07)
         ;
         width: 40%;
-        height: 50%;
+        height: 70%;
         padding: 2.5% 2%;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 10px;
+        :hover{
+                border-bottom: solid 1px white;
+            }
 
         button{
             width: 100%; 
-            height: auto;
-            padding: 8% 2%;
+            height: 100%;
+           
             border-radius: 10px;
             border: none;
             background: none;
             color: white;
             font-weight: 700;
-            font-size: 17px;
+            font-size: 16px;
             cursor: pointer;
 
              @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
@@ -127,13 +130,7 @@ export const Div = styled.span`
             @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
             /* tablets */
             }
-
-
-
-            :hover{
-                zoom: 1.1;
-            }
         }
     }
 
-`
+`;

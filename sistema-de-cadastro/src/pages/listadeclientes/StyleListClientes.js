@@ -9,7 +9,7 @@ export const Container = styled.section`
     justify-content:center ;
     align-items: center;
     row-gap: 3em;
-    
+    background-color: #ededf2;
     
     @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
         /* celulares */
@@ -17,38 +17,32 @@ export const Container = styled.section`
         width: 100%;
         height: auto; 
             
-     }
+     };
     @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
          /* tablets */
          width: 100%;
         height: auto;
 
-     }
-
-
-
-     
-
+     };
 `;
 
 export const Header = styled.header`
  
         display: flex;
+        flex-direction: column;
         position:fixed;
         top: 0;
         z-index: 10;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 6em;
+        height: 8em;
         background-color: #2b2a4a;
        
         @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
         /* celulares */
         justify-content: left; 
-     }
-
-        
+     };     
 `;
 export const Nav =styled.div`
     display: flex;
@@ -69,9 +63,7 @@ export const Nav =styled.div`
             /* tablets */
             font-size: 15px;
         }
-
-    }
-
+    };
 `;
 
 export const Hamburge = styled.div`
@@ -274,13 +266,11 @@ export const Main = styled.main`
     justify-content: space-between;
     align-items: center;
     gap: 5em;
-    padding-top:150px;
+    padding-top:170px;
     
     @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
         /* celulares */
-        padding-top:130px;
-            
-            
+        padding-top:140px;       
      };
    
     div{
@@ -291,9 +281,7 @@ export const Main = styled.main`
         align-items: center;
         flex-wrap: wrap;
         gap:2em;
-    }
-    
-   
+    } 
 `;
 
 export const Aside = styled.aside`
@@ -312,18 +300,13 @@ export const Aside = styled.aside`
     @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
         /* celulares */
          width: 90%;
-         height: auto;
-            
-            
+         height: auto;      
      };
     @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
          /* tablets */
          width: 70%;
          height: auto;
-
      };
-
-
 
     span{
         display: flex;
@@ -425,6 +408,93 @@ export const Aside = styled.aside`
         };
 
 `;
+
+export const ContainerBuscarOrder = styled.div`
+
+        width: 100%;
+        max-width: 88%;
+        height: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+       
+        div{
+            width: 200px;
+            height: 90%;
+            display: flex;
+             align-items: center;
+             justify-content: center;
+
+             @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+            width: 150px;
+            height: 70%; 
+            font-size: 13px;
+                    
+            }
+            @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+                width: 150px;
+                 height: 70%; 
+                font-size: 14px;
+            }
+
+        };
+        input{
+            width: 100%;
+            height: 60%;
+            border:none;
+            font-size: 15px;
+            border-radius: 10px;
+            :focus{
+                border: none;
+                outline: 0;
+            }
+
+            @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+        /* celulares */
+
+            width: 90%;
+            height: 70%; 
+            font-size: 13px;
+                    
+            }
+            @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+                /* tablets */
+            
+                width: 85%;
+                height: 65%; 
+                font-size: 14px;
+            }
+        };
+
+        button{
+            width: 90%;
+            height: 95%;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: #2b2a4a;
+            color: white;
+            font-weight: 700;
+            border :none;
+            border-bottom: solid 2px black;
+            :hover{
+                border-bottom: solid 2px white ;
+                font-weight: 700;
+            }
+
+            @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
+        /* celulares */
+
+            width: 90%;
+            height: 70%; 
+            font-size: 12px;
+                    
+            }
+            @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+                /* tablets */
+            }
+        };
+`; 
 
 export const Footer = styled.footer`
     padding-top: 1em;;

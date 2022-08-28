@@ -32,7 +32,7 @@ export const HomePage = () => {
                         <button onClick={()=>{goToPageCadastro(navigate)}}>Criar cadastro</button> 
                     </span>
                     <span>
-                        <button onClick={()=>{gotoPageListaDeClientes(navigate)}}>Lista de Clients</button>
+                        <button onClick={()=>{gotoPageListaDeClientes(navigate)}}>Lista de Clientes</button>
                     </span>
                 </Div>
 

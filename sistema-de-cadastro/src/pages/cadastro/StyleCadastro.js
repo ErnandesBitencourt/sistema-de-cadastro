@@ -7,6 +7,7 @@ export const Container = styled.section`
     align-items: center;
     width: 100%;
     height: 100vh;
+    background-color: #ededf2;
     @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
 /* celulares */
         width: 100%;

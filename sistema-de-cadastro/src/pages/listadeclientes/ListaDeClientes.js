@@ -4,22 +4,28 @@ import { goToPageCadastro, gotoPageEditeClientes, voltaUmaPage } from "../../rou
 import { useState , useEffect } from "react";
 import axios from "axios"
 import { deletUsers, getAllUsers } from "../../componets/Url";
-// import { DelUsers } from "../../endpoints/DelUsers";
-import { Aside, Button2, ButtonNav, Container, Footer, Hamburge, Header, Main, Nav } from "./StyleListClientes";
+import { Aside, Button2, ButtonNav, Container, ContainerBuscarOrder, Footer, Hamburge, Header, Main, Nav } from "./StyleListClientes";
 import Logo from "../../img/Logo.png"
+import { FadeLoader } from "react-spinners";
 
 
 export const ListaDeClientes = () =>{ 
 const navigate = useNavigate()
 const [listClients, setListClients]=useState([])
 const [hanburge, setHanburge] = useState(false)
+const [loadingSpinner, setLoadingSpinner] = useState(false)
+const [buscar , setBuscar] = useState('')
 
+const onchangeBuscar = (e) =>{
+    setBuscar(e.target.value)
+};
 const OnHanburge = () =>{
     setHanburge(!hanburge)
-}
+};
 
 useEffect(()=>{
     allUsers()  
+    ordenar()
 },[])
 
 const DelUsers = (id) => {
@@ -32,13 +38,16 @@ const DelUsers = (id) => {
     .catch(()=>alert("Error ao excluir"))
   }; 
 
-const allUsers = () =>{
+const allUsers = () =>{ 
     axios.get(getAllUsers)
-    .then((res)=>{setListClients(res.data.resultUsers)})
-    .catch((error)=>{alert(error.response)})
+    .then((res)=>{setListClients(res.data.resultUsers)},
+        setLoadingSpinner(!loadingSpinner)
+    )
+    .catch((error)=>{alert(error.response)})      
 }; 
 
- const lisClientsUers = listClients.map((users)=>{
+const filterUsers = listClients.filter((busca)=>busca.name.toLowerCase().includes(buscar.toLowerCase()));
+ const lisClientsUers = filterUsers.map((users)=>{
     return (
         <Aside key={users.id}>
             <span>
@@ -47,7 +56,7 @@ const allUsers = () =>{
                 </div>
             </span>    
             <span>
-                <p>Nome:{users.name} </p>
+                <p>Nome: {users.name} </p>
             </span>
             <span>
                  <p>Idade: {users.age}</p>
@@ -69,8 +78,23 @@ const allUsers = () =>{
             
         </Aside>
     )
-})
-console.log(lisClientsUers)
+});
+
+const ordenar = () =>{ 
+   const neyList =  [...listClients]
+   neyList.sort((a , b)=>{
+    if (a.name >  b.name ) {
+      return 1;
+    }else{
+        if (a.name < b.name ) {
+            return -1;
+          } else{
+            return 0;
+        }   
+    };
+  });
+  setListClients(neyList)    
+};
 
 return(
 
@@ -94,16 +118,26 @@ return(
                         <span hanburge={hanburge}></span>
                     </Hamburge>
                 </Nav>
+                < ContainerBuscarOrder>
+                   <div>
+                        <input
+                        value={buscar}
+                        onChange={onchangeBuscar}
+                        placeholder="Procurar"/>
+                   </div>
+                    <div>
+                         <button onClick={()=>{ordenar()}} >Ordem alfabética</button>
+                    </div>
+                </ ContainerBuscarOrder>
             </Header >
         <Main>
-           
             <div>
-                {lisClientsUers}
+                {loadingSpinner ? lisClientsUers : <FadeLoader/>}
             </div>
         </Main>  
         <Footer>
            <span>
-              <p>Desenvolvidor por:  Ernandes Bitencourt @2022 </p> <img src={Logo} alt={ "Foto da logo S C | sitema de cadastro"} />
+              <p>Desenvolvido por :  Ernandes Bitencourt @2022 </p> <img src={Logo} alt={ "Foto da logo S C | sitema de cadastro"} />
            </span>
         </Footer>
 
