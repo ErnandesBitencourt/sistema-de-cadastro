@@ -30,6 +30,7 @@ O código busca a utilização de conceitos de Clean Architecture e Clean Code. 
 - axios
 - react-router-dom
 - styled-components
+- react-spinners
 - Deploy feito no gitHub pages : gh-pages
 
 ### Framework
