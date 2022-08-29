@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/sistema-de-cadastro/static/css/main.e6c13ad2.css",
-    "main.js": "/sistema-de-cadastro/static/js/main.957b3938.js",
+    "main.js": "/sistema-de-cadastro/static/js/main.239de12f.js",
     "static/js/787.122accd1.chunk.js": "/sistema-de-cadastro/static/js/787.122accd1.chunk.js",
     "static/media/TelaDeCarregamento1.gif": "/sistema-de-cadastro/static/media/TelaDeCarregamento1.d4bf21d1e2c1449afa8c.gif",
     "static/media/GifLogonPage.gif": "/sistema-de-cadastro/static/media/GifLogonPage.d8ce3ec43e01ef093ac3.gif",
     "static/media/Logo.png": "/sistema-de-cadastro/static/media/Logo.cc9a4450c126776923b0.png",
     "index.html": "/sistema-de-cadastro/index.html",
     "main.e6c13ad2.css.map": "/sistema-de-cadastro/static/css/main.e6c13ad2.css.map",
-    "main.957b3938.js.map": "/sistema-de-cadastro/static/js/main.957b3938.js.map",
+    "main.239de12f.js.map": "/sistema-de-cadastro/static/js/main.239de12f.js.map",
     "787.122accd1.chunk.js.map": "/sistema-de-cadastro/static/js/787.122accd1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.957b3938.js"
+    "static/js/main.239de12f.js"
   ]
 }
