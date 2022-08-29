@@ -7,7 +7,7 @@ Concluído.
 
 O projeto é tem como objetivo de pegar e enviar informações para o banco de dados MySQL via  API(API REST). Dentro disso, os endpoints funcionam a partir de lógicas de,
 listagem de clientes cadastrados, criar cadastro, editar cadastro e deletar cadastro.
-O código foi escrito a partir do paradigma de Programação Orientada à Objeto, buscando a utilização de conceitos de Clean Architecture e Clean Code. Deploy do projeto feito no Gihube Pages
+O código busca a utilização de conceitos de Clean Architecture e Clean Code. Deploy do projeto feito no Gihube Pages
 
 
 ### Link do projeto
@@ -19,6 +19,8 @@ O código foi escrito a partir do paradigma de Programação Orientada à Objeto
 - Lista de clientes cadastrados 
 - Editar cadatro
 - Deleatar cadastro
+- procura
+- ordenar
 
 
 ### Tecnologias Utilizadas:
@@ -50,7 +52,7 @@ O código foi escrito a partir do paradigma de Programação Orientada à Objeto
 
 * GET  https://bemol-cadastro.herokuapp.com/user/allUsers
 
-![lista-de-clients](https://user-images.githubusercontent.com/80565676/187035649-5ebfaaf0-02f5-4db5-b3ee-1c3c1ea4023d.PNG)
+![image](https://user-images.githubusercontent.com/80565676/187099585-c2ae4ae4-8d11-4ed2-8399-fd3ab3e739d7.png)
 
 
 
