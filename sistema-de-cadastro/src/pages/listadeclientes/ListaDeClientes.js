@@ -9,6 +9,7 @@ import Logo from "../../img/Logo.png"
 import { FadeLoader } from "react-spinners";
 
 
+
 export const ListaDeClientes = () =>{ 
 const navigate = useNavigate()
 const [listClients, setListClients]=useState([])
@@ -24,8 +25,12 @@ const OnHanburge = () =>{
 };
 
 useEffect(()=>{
-    allUsers()  
+   
     ordenar()
+
+    setTimeout(() => {
+        allUsers()  
+    }, 800);
 },[])
 
 const DelUsers = (id) => {
@@ -47,36 +52,38 @@ const allUsers = () =>{
 }; 
 
 const filterUsers = listClients.filter((busca)=>busca.name.toLowerCase().includes(buscar.toLowerCase()));
- const lisClientsUers = filterUsers.map((users)=>{
+ const lisClientsUers =  filterUsers.length > 0 && filterUsers.map((users)=>{
     return (
-        <Aside key={users.id}>
-            <span>
-                <div>
-                    <h3>C L I E N T E</h3>
-                </div>
-            </span>    
-            <span>
-                <p>Nome: {users.name} </p>
-            </span>
-            <span>
-                 <p>Idade: {users.age}</p>
-            </span>
-            <span>
-                <p>Email: {users.email}</p>
-            </span>
-            <span>
-              <p>Endereço: {users.address}</p>
-            </span>
-            <span>
-               <p>N° Casa: {users.house}</p>
-            </span>
-                   
-           <footer>
-                <button onClick={()=>DelUsers(users.id)} >excluir</button>
-                <button onClick={()=>gotoPageEditeClientes(navigate,users.id)}>editar</button>
-           </footer>
-            
-        </Aside>
+       
+    <Aside key={users.id}>
+       <span>
+           <div>
+               <h3>C L I E N T E</h3>
+           </div>
+       </span>    
+       <span>
+           <p>Nome: {users.name} </p>
+       </span>
+       <span>
+            <p>Idade: {users.age}</p>
+       </span>
+       <span>
+           <p>Email: {users.email}</p>
+       </span>
+       <span>
+         <p>Endereço: {users.address}</p>
+       </span>
+       <span>
+          <p>N° Casa: {users.house}</p>
+       </span>
+              
+      <footer>
+           <button onClick={()=>DelUsers(users.id)} >excluir</button>
+           <button onClick={()=>gotoPageEditeClientes(navigate,users.id)}>editar</button>
+      </footer>
+       
+   </Aside> 
+  
     )
 });
 
@@ -132,7 +139,7 @@ return(
             </Header >
         <Main>
             <div>
-                {loadingSpinner ? lisClientsUers : <FadeLoader/>}
+                {loadingSpinner ? lisClientsUers : <FadeLoader/> }
             </div>
         </Main>  
         <Footer>

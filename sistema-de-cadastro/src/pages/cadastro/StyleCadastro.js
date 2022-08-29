@@ -161,8 +161,10 @@ export const Main = styled.main`
     width: 92%;
     padding: 1em;
      caret-color:blue ;
+     background-color:  #ededf2;
     :focus{
         outline: 0;   
+        background-color:  #ededf2;
     };
     };
 
@@ -175,7 +177,7 @@ export const Main = styled.main`
         display: flex;
         justify-content: center;
         align-items: center;
-        background: white;
+        background:  #ededf2;
     };
 
     footer{
