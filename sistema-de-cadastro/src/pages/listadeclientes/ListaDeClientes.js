@@ -30,7 +30,7 @@ useEffect(()=>{
 
     setTimeout(() => {
         allUsers()  
-    }, 800);
+    },3000);
 },[])
 
 const DelUsers = (id) => {

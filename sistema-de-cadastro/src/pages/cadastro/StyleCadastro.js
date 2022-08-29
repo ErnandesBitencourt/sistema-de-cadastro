@@ -11,7 +11,7 @@ export const Container = styled.section`
     @media screen and (min-device-width : 300px) and (max-device-width : 480px) {
 /* celulares */
         width: 100%;
-        height: 100%;
+        height: 100vh;
         
         }
     @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
@@ -34,6 +34,7 @@ export const Main = styled.main`
     
         width: 100%;
         gap:0;
+        border: solid 1px red;
         
         }
     @media screen and (min-device-width : 481px) and (max-device-width : 800px) {
